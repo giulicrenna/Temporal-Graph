@@ -1,0 +1,9 @@
+t,u,v,directed,weight,color
+0,a,b,False,1.0,
+0,b,c,False,1.0,
+1,a,b,False,1.0,
+1,b,c,False,1.0,
+1,c,d,False,1.0,
+2,a,b,False,1.0,
+2,d,e,False,1.0,
+3,d,e,False,1.0,

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "temporal-graph"
+dynamic = ["version"]
+description = "Model temporal graphs and render them as SVG."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Giuliano Crenna", email = "giulicrenna@gmail.com" }]
+keywords = ["temporal graph", "dynamic network", "visualization", "svg"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov", "ruff", "mypy", "build", "twine", "pillow"]
+fonts = ["matplotlib"]
+docs = ["sphinx>=7", "furo"]
+
+[tool.setuptools.dynamic]
+version = { attr = "temporal_graph.__version__" }
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+
+[tool.setuptools.packages.find]
+include = ["temporal_graph*"]
+
+[tool.setuptools.package-data]
+temporal_graph = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"temporal_graph/_font_data.py" = ["E501", "Q000"]
+"temporal_graph/_colors.py" = ["E501"]
+
+[tool.mypy]
+strict = true
