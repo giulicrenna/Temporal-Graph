@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="static/logo.png" alt="Temporal Graph logo" width="220">
+  <img src="https://raw.githubusercontent.com/giulicrenna/Temporal-Graph/main/static/logo.png" alt="Temporal Graph logo" width="220">
 </p>
 
 <h1 align="center">temporal-graph</h1>
@@ -36,16 +36,20 @@ library stores one snapshot per instant and offers three things on top:
   CSV and GEXF export.
 
 Every algorithm is checked against the worked examples of the notes
-[*Grafos temporales: una introducción desde la perspectiva algorítmica*](grafos_temporales.pdf)
+[*Grafos temporales: una introducción desde la perspectiva algorítmica*](https://github.com/giulicrenna/Temporal-Graph/blob/main/docs/grafos_temporales.pdf)
 and cross-checked against brute force on random graphs.
 
-![decisions mode](output/example_decisions.png)
+![decisions mode](https://raw.githubusercontent.com/giulicrenna/Temporal-Graph/main/output/example_decisions.png)
 
 ## Contents
 
+- [Contents](#contents)
 - [Install](#install)
 - [Quick start](#quick-start)
 - [Visualization](#visualization)
+  - [Modes](#modes)
+  - [Edge properties](#edge-properties)
+  - [Saving figures](#saving-figures)
 - [Animating the evolution (GIF)](#animating-the-evolution-gif)
 - [Algorithms](#algorithms)
 - [Data tools](#data-tools)
@@ -125,7 +129,7 @@ In Jupyter a `Figure` displays inline as SVG. `render(graph, mode, path)` still
 works and returns the written path.
 
 PNG output uses a built-in anti-aliasing rasterizer and an embedded copy of
-the DejaVu Sans outlines (see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)).
+the DejaVu Sans outlines (see [THIRD_PARTY_NOTICES.md](https://github.com/giulicrenna/Temporal-Graph/blob/main/THIRD_PARTY_NOTICES.md)).
 A typical graph renders in a fraction of a second. Very large ones, thousands
 of pixels per side, take seconds, so lower `scale` if needed. Colors may be
 hex, `rgb()` / `rgba()` or any CSS color name; an unsupported color raises
@@ -164,12 +168,12 @@ Coordinates are scaled so that the two closest nodes do not overlap. Short
 labels are drawn inside the nodes and longer ones below.
 
 <p align="center">
-  <img src="output/binary_tree.gif" alt="binary tree being built and taken apart">
+  <img src="https://raw.githubusercontent.com/giulicrenna/Temporal-Graph/main/output/binary_tree.gif" alt="binary tree being built and taken apart">
 </p>
 
 <p align="center">
-  <img src="output/markov_flow.gif" alt="probability flow of a Markov chain" width="45%">
-  <img src="output/social_network.gif" alt="social network evolution" width="45%">
+  <img src="https://raw.githubusercontent.com/giulicrenna/Temporal-Graph/main/output/markov_flow.gif" alt="probability flow of a Markov chain" width="45%">
+  <img src="https://raw.githubusercontent.com/giulicrenna/Temporal-Graph/main/output/social_network.gif" alt="social network evolution" width="45%">
 </p>
 
 ## Algorithms
@@ -250,30 +254,30 @@ exporters.to_gexf(g, "graph.gexf")
 
 ## Examples
 
-Every script in [examples/](examples/) runs from the repo root and writes its
+Every script in [examples/](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/) runs from the repo root and writes its
 output into `output/`.
 
 | Script | Shows | Output |
 |--------|-------|--------|
-| [example.py](examples/example.py) | Direction, weight, color and reconnection in one graph. | [connections](output/example_connections.svg), [decisions](output/example_decisions.svg) |
-| [social_network.py](examples/social_network.py) | Friendships that strengthen, form and fade; weight and color as relationship strength. | [connections](output/social_network_connections.svg), [decisions](output/social_network_decisions.svg) |
-| [process_flow.py](examples/process_flow.py) | Directed handoffs in a delivery pipeline, plus a per-snapshot acyclicity check. | [connections](output/process_flow_connections.svg), [decisions](output/process_flow_decisions.svg) |
-| [custom_colors.py](examples/custom_colors.py) | Color as health and weight as traffic on the same edges over time. | [connections](output/custom_colors_connections.svg), [decisions](output/custom_colors_decisions.svg) |
-| [binary_tree.py](examples/binary_tree.py) | A 63-node binary tree built breadth-first and pruned back, with a hierarchical `positions` layout. Takes about 20 s. | [binary_tree.gif](output/binary_tree.gif), [full tree](output/binary_tree_full.png), [decisions](output/binary_tree_decisions.png) |
-| [markov_chain.py](examples/markov_chain.py) | A non-reversible Markov chain in two parts. First, a simulated trajectory whose foremost arrivals are the first hitting times, checked against the exact `h = 1 + P h`. Second, the exact net probability flow converging to the stationary cycle current. | [trajectory](output/markov_trajectory_connections.png), [markov_flow.gif](output/markov_flow.gif), [stationary flow](output/markov_flow_stationary.png) |
-| [physics/harmonic_chain.py](examples/physics/harmonic_chain.py) | Sound in a chain of masses and springs. Foremost journeys over energetic springs track the wavefront, which matches the exact Bessel solution, and recover `c = a sqrt(k/m)` within 2 %. See [examples/physics](examples/physics/README.md). | [light cone](output/physics/harmonic_chain_connections.svg), [harmonic_chain.gif](output/physics/harmonic_chain.gif) |
-| [physics/hard_disk_gas.py](examples/physics/hard_disk_gas.py) | Collisions of a hard-disk gas as a contact network. The collision rate is checked against Enskog theory, speeds against Maxwell-Boltzmann, and causal spreading against a well-mixed SI process. | printed results, [cascade](output/physics/hard_disk_cascade_connections.svg) |
-| [temporal_algorithms.py](examples/temporal_algorithms.py) | Journeys, metrics, Menger, labelings, periodic and random models, exact classic problems on the notes' examples. | printed results, `moving_star.gif` |
-| [animation.py](examples/animation.py) | Evolution of the social network and the pipeline as animated GIFs. | [social_network.gif](output/social_network.gif), [process_flow.gif](output/process_flow.gif) |
-| [analysis_and_export.py](examples/analysis_and_export.py) | Degree, components, persistence, diff, subgraph, and JSON / CSV / GEXF export. | printed metrics, `network.json`, `network.csv`, `network.gexf` |
+| [example.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/example.py) | Direction, weight, color and reconnection in one graph. | [connections](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/example_connections.svg), [decisions](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/example_decisions.svg) |
+| [social_network.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/social_network.py) | Friendships that strengthen, form and fade; weight and color as relationship strength. | [connections](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/social_network_connections.svg), [decisions](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/social_network_decisions.svg) |
+| [process_flow.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/process_flow.py) | Directed handoffs in a delivery pipeline, plus a per-snapshot acyclicity check. | [connections](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/process_flow_connections.svg), [decisions](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/process_flow_decisions.svg) |
+| [custom_colors.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/custom_colors.py) | Color as health and weight as traffic on the same edges over time. | [connections](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/custom_colors_connections.svg), [decisions](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/custom_colors_decisions.svg) |
+| [binary_tree.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/binary_tree.py) | A 63-node binary tree built breadth-first and pruned back, with a hierarchical `positions` layout. Takes about 20 s. | [binary_tree.gif](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/binary_tree.gif), [full tree](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/binary_tree_full.png), [decisions](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/binary_tree_decisions.png) |
+| [markov_chain.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/markov_chain.py) | A non-reversible Markov chain in two parts. First, a simulated trajectory whose foremost arrivals are the first hitting times, checked against the exact `h = 1 + P h`. Second, the exact net probability flow converging to the stationary cycle current. | [trajectory](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/markov_trajectory_connections.png), [markov_flow.gif](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/markov_flow.gif), [stationary flow](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/markov_flow_stationary.png) |
+| [physics/harmonic_chain.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/physics/harmonic_chain.py) | Sound in a chain of masses and springs. Foremost journeys over energetic springs track the wavefront, which matches the exact Bessel solution, and recover `c = a sqrt(k/m)` within 2 %. See [examples/physics](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/physics/README.md). | [light cone](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/physics/harmonic_chain_connections.svg), [harmonic_chain.gif](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/physics/harmonic_chain.gif) |
+| [physics/hard_disk_gas.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/physics/hard_disk_gas.py) | Collisions of a hard-disk gas as a contact network. The collision rate is checked against Enskog theory, speeds against Maxwell-Boltzmann, and causal spreading against a well-mixed SI process. | printed results, [cascade](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/physics/hard_disk_cascade_connections.svg) |
+| [temporal_algorithms.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/temporal_algorithms.py) | Journeys, metrics, Menger, labelings, periodic and random models, exact classic problems on the notes' examples. | printed results, `moving_star.gif` |
+| [animation.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/animation.py) | Evolution of the social network and the pipeline as animated GIFs. | [social_network.gif](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/social_network.gif), [process_flow.gif](https://github.com/giulicrenna/Temporal-Graph/blob/main/output/process_flow.gif) |
+| [analysis_and_export.py](https://github.com/giulicrenna/Temporal-Graph/blob/main/examples/analysis_and_export.py) | Degree, components, persistence, diff, subgraph, and JSON / CSV / GEXF export. | printed metrics, `network.json`, `network.csv`, `network.gexf` |
 
 Social network, `decisions` mode:
 
-![social network, decisions mode](output/social_network_decisions.png)
+![social network, decisions mode](https://raw.githubusercontent.com/giulicrenna/Temporal-Graph/main/output/social_network_decisions.png)
 
 Delivery pipeline, `connections` mode:
 
-![process flow, connections mode](output/process_flow_connections.png)
+![process flow, connections mode](https://raw.githubusercontent.com/giulicrenna/Temporal-Graph/main/output/process_flow_connections.png)
 
 ## Behavior notes
 
@@ -295,8 +299,8 @@ mypy temporal_graph
 pytest --cov=temporal_graph
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md) and
-[PUBLISHING.md](PUBLISHING.md).
+See [CONTRIBUTING.md](https://github.com/giulicrenna/Temporal-Graph/blob/main/CONTRIBUTING.md), [CHANGELOG.md](https://github.com/giulicrenna/Temporal-Graph/blob/main/CHANGELOG.md) and
+[PUBLISHING.md](https://github.com/giulicrenna/Temporal-Graph/blob/main/PUBLISHING.md).
 
 ## Author
 
@@ -318,19 +322,19 @@ notes its algorithms follow:
   author      = {Crenna, Giuliano},
   title       = {temporal-graph: modelling, computing on and rendering temporal graphs},
   year        = {2026},
-  institution = {Facultad de Ciencias Exactas, Ingenier{\'\i}a y Agrimensura, Universidad Nacional de Rosario}
+  institution = {Facultad de Ciencias Exactas, Ingeniería y Agrimensura, Universidad Nacional de Rosario}
 }
 
 @misc{crenna_grafos_temporales,
   author = {Crenna, Giuliano},
-  title  = {Grafos temporales: una introducci{\'o}n desde la perspectiva algor{\'\i}tmica},
+  title  = {Grafos temporales: una introducción desde la perspectiva algorítmica},
   year   = {2026},
   month  = oct,
-  note   = {Facultad de Ciencias Exactas, Ingenier{\'\i}a y Agrimensura, Universidad Nacional de Rosario}
+  note   = {Facultad de Ciencias Exactas, Ingeniería y Agrimensura, Universidad Nacional de Rosario}
 }
 ```
 
 ## License
 
-MIT, see [LICENSE](LICENSE). The embedded DejaVu Sans outlines are under the
-Bitstream Vera license, see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+MIT, see [LICENSE](https://github.com/giulicrenna/Temporal-Graph/blob/main/LICENSE). The embedded DejaVu Sans outlines are under the
+Bitstream Vera license, see [THIRD_PARTY_NOTICES.md](https://github.com/giulicrenna/Temporal-Graph/blob/main/THIRD_PARTY_NOTICES.md).
